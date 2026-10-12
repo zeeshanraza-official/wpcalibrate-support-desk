@@ -1,0 +1,392 @@
+/**
+ * WPCalibrate Support Desk - Frontend Styles
+ */
+
+.wpcalibrate-portal-container {
+    --wpc-portal-primary: #0073aa;
+    --wpc-portal-primary-hover: #005a87;
+    --wpc-portal-bg: #ffffff;
+    --wpc-portal-bg-muted: #f8fafc;
+    --wpc-portal-border: #e2e8f0;
+    --wpc-portal-text: #1e293b;
+    --wpc-portal-text-muted: #64748b;
+    --wpc-portal-radius: 8px;
+
+    font-family: inherit;
+    color: var(--wpc-portal-text);
+    margin: 24px 0;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+.wpcalibrate-portal-container * {
+    box-sizing: border-box;
+}
+
+/* Navigation */
+.wpcalibrate-portal-nav {
+    display: flex;
+    gap: 8px;
+    border-bottom: 2px solid var(--wpc-portal-border);
+    margin-bottom: 24px;
+}
+
+.wpcalibrate-portal-nav .nav-item {
+    padding: 10px 18px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--wpc-portal-text-muted);
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.2s;
+}
+
+.wpcalibrate-portal-nav .nav-item:hover {
+    color: var(--wpc-portal-primary);
+}
+
+.wpcalibrate-portal-nav .nav-item.active {
+    color: var(--wpc-portal-primary);
+    border-bottom-color: var(--wpc-portal-primary);
+}
+
+/* Header & Actions */
+.wpcalibrate-portal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.wpcalibrate-portal-header h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--wpc-portal-text);
+}
+
+.wpcalibrate-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: var(--wpc-portal-radius);
+    text-decoration: none;
+    cursor: pointer;
+    background: var(--wpc-portal-primary);
+    color: #ffffff !important;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.wpcalibrate-btn:hover {
+    background: var(--wpc-portal-primary-hover);
+}
+
+.wpcalibrate-btn-sm {
+    padding: 4px 10px;
+    font-size: 12px;
+}
+
+/* Alerts */
+.wpcalibrate-alert {
+    padding: 14px 18px;
+    border-radius: var(--wpc-portal-radius);
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid transparent;
+}
+
+.wpcalibrate-alert.alert-success {
+    background-color: #ecfdf5;
+    border-color: #a7f3d0;
+    color: #065f46;
+}
+
+.wpcalibrate-alert.alert-error {
+    background-color: #fef2f2;
+    border-color: #fecaca;
+    color: #991b1b;
+}
+
+.wpcalibrate-alert.alert-warning {
+    background-color: #fffbeb;
+    border-color: #fde68a;
+    color: #92400e;
+}
+
+.wpcalibrate-alert.alert-info {
+    background-color: #eff6ff;
+    border-color: #bfdbfe;
+    color: #1e40af;
+}
+
+/* Empty State */
+.wpcalibrate-empty-box {
+    background: var(--wpc-portal-bg-muted);
+    border: 1px dashed var(--wpc-portal-border);
+    border-radius: var(--wpc-portal-radius);
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--wpc-portal-text-muted);
+}
+
+/* Frontend Tickets Table */
+.wpcalibrate-tickets-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--wpc-portal-border);
+    border-radius: var(--wpc-portal-radius);
+    background: #ffffff;
+}
+
+.wpcalibrate-frontend-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: start;
+    font-size: 14px;
+}
+
+.wpcalibrate-frontend-table th {
+    background: var(--wpc-portal-bg-muted);
+    padding: 12px 16px;
+    font-weight: 600;
+    color: var(--wpc-portal-text-muted);
+    border-bottom: 1px solid var(--wpc-portal-border);
+}
+
+.wpcalibrate-frontend-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--wpc-portal-border);
+    vertical-align: middle;
+}
+
+.wpcalibrate-frontend-table tr:last-child td {
+    border-bottom: none;
+}
+
+.ticket-ref-badge {
+    background: var(--wpc-portal-bg-muted);
+    border: 1px solid var(--wpc-portal-border);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--wpc-portal-primary);
+    text-decoration: none;
+}
+
+/* Form Card */
+.wpcalibrate-form-card {
+    background: #ffffff;
+    border: 1px solid var(--wpc-portal-border);
+    border-radius: var(--wpc-portal-radius);
+    padding: 28px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.wpcalibrate-form-card h2 {
+    margin: 0 0 6px 0;
+    font-size: 22px;
+}
+
+.form-row-split {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row-split > .form-group {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group label .required {
+    color: #e11d48;
+}
+
+.wpcalibrate-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--wpc-portal-border);
+    border-radius: var(--wpc-portal-radius);
+    font-size: 14px;
+    font-family: inherit;
+    background: #ffffff;
+}
+
+.wpcalibrate-input:focus {
+    outline: 2px solid var(--wpc-portal-primary);
+    outline-offset: -1px;
+    border-color: transparent;
+}
+
+.field-hint {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--wpc-portal-text-muted);
+}
+
+.wpcalibrate-btn-submit {
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    background: var(--wpc-portal-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--wpc-portal-radius);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.wpcalibrate-btn-submit:hover {
+    background: var(--wpc-portal-primary-hover);
+}
+
+/* Conversation View */
+.wpcalibrate-conversation-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wpcalibrate-ticket-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.wpcalibrate-ticket-summary-box {
+    background: #ffffff;
+    border: 1px solid var(--wpc-portal-border);
+    border-radius: var(--wpc-portal-radius);
+    padding: 20px;
+}
+
+.wpcalibrate-ticket-summary-box h2 {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.wpcalibrate-ticket-summary-box .ref-badge {
+    background: var(--wpc-portal-bg-muted);
+    border: 1px solid var(--wpc-portal-border);
+    padding: 2px 8px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.meta-row {
+    font-size: 13px;
+    color: var(--wpc-portal-text-muted);
+}
+
+.wpcalibrate-messages-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.wpcalibrate-single-msg {
+    border: 1px solid var(--wpc-portal-border);
+    border-radius: var(--wpc-portal-radius);
+    padding: 18px 20px;
+    background: #ffffff;
+}
+
+.wpcalibrate-single-msg.msg-agent {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+}
+
+.wpcalibrate-single-msg .msg-meta {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.badge-staff {
+    background: #dcfce7;
+    color: #166534;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-inline-start: 6px;
+}
+
+.msg-body {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.msg-attachments {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--wpc-portal-border);
+    font-size: 13px;
+}
+
+.msg-attachments ul {
+    margin: 6px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wpcalibrate-reply-box {
+    background: #ffffff;
+    border: 1px solid var(--wpc-portal-border);
+    border-radius: var(--wpc-portal-radius);
+    padding: 20px;
+}
+
+/* Pagination */
+.wpcalibrate-pagination {
+    display: flex;
+    gap: 6px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.wpcalibrate-pagination .page-num {
+    padding: 6px 12px;
+    border: 1px solid var(--wpc-portal-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--wpc-portal-text);
+}
+
+.wpcalibrate-pagination .page-num.active {
+    background: var(--wpc-portal-primary);
+    color: #ffffff;
+    border-color: var(--wpc-portal-primary);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .form-row-split {
+        flex-direction: column;
+        gap: 0;
+    }
+}

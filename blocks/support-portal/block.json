@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpcalibrate/support-portal",
+  "version": "1.0.0",
+  "title": "WPCalibrate Support Portal",
+  "category": "widgets",
+  "icon": "sos",
+  "description": "Embed the complete WPCalibrate Support Desk customer portal, ticket submission form, or ticket list.",
+  "keywords": ["support", "ticket", "helpdesk", "wpcalibrate"],
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "defaultView": {
+      "type": "string",
+      "default": "portal"
+    }
+  },
+  "editorScript": "wpcalibrate-block-editor",
+  "style": "wpcalibrate-frontend-style"
+}
